@@ -25,5 +25,9 @@ export class GithubService{
             .map(res=>res.json());
     }
 
+    updateCustomer(username:string){
+        this.username = username;
+    }
+
 }
 
