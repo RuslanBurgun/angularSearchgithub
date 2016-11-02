@@ -6,7 +6,7 @@
   </div>
   <div class="panel-body">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 co">
           <img class="img-responsive" src="{{user.avatar_url}}" alt="" >
           <a href="{{user.html_url}}" target="_blank" class="btn btn-default btn-block">View Profile</a>
         </div>
@@ -28,5 +28,27 @@
       </div>
   </div>
 </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">User Repos</h3>
+  </div>
+  <div class="panel-body">
+    <div *ngFor="let repo of repos">
+      <div class="row">
+        <div class="col-md-9">
+          <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+          <p>{{repo.description}}</p> 
+        </div>
+        <div class="col-md-3">
+              <span class="label label-default"><strong>{{repo.watchers}}</strong>Watchers</span>
+              <span class="label label-primary"><strong>{{repo.forks}}</strong>Forks</span>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
 </div>
 
